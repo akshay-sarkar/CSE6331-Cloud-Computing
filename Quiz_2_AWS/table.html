@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>List Files</title>
+    </head>
+    <body>
+        <h3>All Buckets</h3>
+        <table border="2px">
+            <tr><td>Bucket Name</td><td>Creation Date</td></tr>
+            {% for bucket in allbucket %}
+                <tr><td>{{bucket.Name}}</td>
+                <td>{{bucket.CreationDate}}</td></tr>
+            {% endfor %}
+        </table>
+        <h3> All Files </h3>
+        <table border="3px">
+            <tr><td>File Name</td><td>Creation Date</td><td>Size</td><td>Download</td><td>Comment</td><td>Image</td><td>Update Comment</td></tr>
+            {% for files in allfiles %}
+                <tr><td>{{files.Key}}</td>
+                <td>{{files.LastModified}}</td>
+                <td>{{files.Size}}</td>
+                <!-- Make Files Public in Container -->
+                <td><a href="https://s3.us-east-2.amazonaws.com/akshay-sarkar-s3/{{files.Key}}">Download File</a></td>
+                <td>{{comments[files.Key]}}</td>
+                <td><img height="200" width="200" src="https://s3.us-east-2.amazonaws.com/akshay-sarkar-s3/{{files.Key}}"/></td>
+                <td>
+                    <form id="upload_form" action="/uploadComment" method="POST" enctype="multipart/form-data">
+                        <input type="text" name="comment">
+                        <input type="text" value="{{files.Key}}" name="file_name" readonly>
+                        <input type="submit" value="update comment">
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+ 6. Your program, running on AWS, should (utilizing a web interface, from AWS) 
+    - create a web page that has your name, student id and a picture of you on the top. 
+      (If you don't have a picture of you handy, you may use mypic)
+    - allow a user to select local text files and give each one a number (between 1 and 99) and upload the text
+      and number to AWS. Numbers are NOT generated, they are given by  the user.
+    - show a web page that allows a user to specify a number and display the corresponding text.
+    - show a web page that allows a user to specify a range of numbers (for example from: 4 to: 10) and
+      show each number followed by the first line (or first 60 characters) of all text files
+      uploaded within that range.
+    - allow a user to specify a number and modify the corresponding text
+
+--> Show us. 
+--> Put code following each part, above.
+ 
+7. Concepts:
+   a. Why is "surge" computing (parts of local work are deployed on cloud, when local machines
+      can not handle workload) difficult to deploy for many applications (what are the issues, problems). 
+   b. Why is "scaling down" never done for cloud applications (what is scaling down)?
+   c. How can AWS (or any cloud service provider) have micro-instance, small-, large- and other size instances,
+      do they have different computers for each size, or something else (what)? Generally, what is the difference
+      between these instances?
+   d. (On AWS, or similar) Do files also come in different "instance" sizes, or are they limited in size,
+      by the instance size? Do databases also have similar limitations because of the instance size? 

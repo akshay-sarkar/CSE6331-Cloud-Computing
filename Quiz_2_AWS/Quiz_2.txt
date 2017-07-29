@@ -1,0 +1,76 @@
+Quiz Q2, Summer 2017   (c) DL, UTA, 2017
+
+ Please read this:
+  I understand that I am on my honor during this quiz, I will not collaborate, 
+  use non-allowed sources, and I will not discuss this quiz with anyone for 
+  the next 4 hours. In submitting this quiz, I agree to this honor code.
+  Please initial here: Sarkar Akshay - 6793
+
+  C&P means copy and paste only those relevant lines from your program(s) into this quiz.
+  You may include lines of code, HTML, CSS, or any "textual" artifact (no libraries, executables, utilities,
+  pictures, diagrams, songs, or video, please)
+
+  NOTE: Please submit on time, late submissions will have points deducted!
+        Please submit to Blackboard. 
+
+  Due to technical logistics, we can not look at any demo (the "show us" part) in the last 5 minutes of the quiz. 
+
+  The icon "--->" means that you should place an answer at this location in the quiz, either textual, pieces of code 
+    (or HTML,XML,CSS or similar), or numeric results.
+
+ 1. Good luck!
+
+ 2. Get all files from this same folder.
+       
+ 3. Rename this quiz and your programs with your name and last digits of your ID.
+
+ 4. For each of the following parts, please implement, cut and paste the relevant code (no binaries,
+    libraries, etc, just source code and any textual configuration files, html, and similar) into this file. 
+    If possible, show each part (with  an output) to a GTA, when complete. 
+    Submit this quiz (to Blackboard) when complete, you may make up to 5 submissions. 
+
+ 5. You do not need to implement "unusual" error handling (bad executable, etc.), unless needed for this quiz,  
+    (such as file already exists, empty files, etc) but your program should not abnormally terminate (crash).
+
+ 6. Your program, running on AWS, should (utilizing a web interface, from AWS) 
+    - create a simple web page to allow a user to select local pictures and enter a two line comment and upload that
+      picture and text comment (maximum 120 characters) to AWS.
+    - allow a user (using a web page) to list the files, creation times, and comments of pictures on AWS
+    - allow a user to remove files given a keyword contained in the text comment
+    - show pictures and comments on a web page
+    - allow a user to modify the comments for a picture
+ 
+7. Concepts:
+   a. What is "fine grained billing"?
+	Fine grained billing in terms of cloud computing refer to the point that we need to pay for amount of utilization of only used services.
+	Any Additional service cost would not need to be paid if you haven't untilized it even though it would come into a package as together.
+	For Instance AWS Free Tier comes with multiple services like EC2(750 Hours limit) and S3(5GB).
+		Now if you utlized all you limit in s3 with storage more than 5 GB, you would need to pay for only that service not for the EC2, 
+		since you have not consumed all of the EC2 limit.
+
+	Amazon Web Services , Microsoft Azure, Google App Engine highly follow this kind of structure in business market. 
+	It just not make the business needs easy for the  customer but also provide them with flexibilty to chosse 
+		which and what service they want to use at any given time. And you will chared for what you have used.
+   b. What is the "data lockin" problem?
+	Data-Lock problem refer to the point that customer is not able to move freely from one service to another as he is depenedent on the cloud service provider. 
+	Their could be petrabytes of data that needs to be moved when you moving from one service to another.
+	Apart from it, when switching between the cloud services the configuration and setup for the application
+	 needs to be reconfigured based on new cloud service provider which comes as an tecnical limitation sometimes
+	This friction of moving from one cloud service provider to other is called "data-lockin".
+
+
+   c. When (or why) is software licensing an issue, when you are already paying for services?.
+	Issues:
+	1 	Software licensing based on hardware. Sometimes customer dont need to use all the hardware all the time, but they purchased it so they are paying for it.
+		Which could be overcome by using the Cloud Computing Elasticity features.
+	2. 	Tracking down software licensing for any service is definatley not easy, require strong customer suppoert to be well defined .
+
+	
+   d. Sometimes people use the term "cost associativity" with cloud services. Why (what does it mean)?
+	Cost Asscivity referes to the point that the cost of the service is directlp proportional to its usage unit.
+	For Example if you use Ec2 for 9 hour a day on 20 servers, you have to pay same amount as you would be using 1 EC2 for 180 Hours(9x20).
+	Being able to use 20 servers for nine hours for the same price as using one server for 1,800 hours is new capability that cloud computing technology
+	provides us which is called cost associativity.
+
+	It would be helpful when you think that sometimes your services requires more that 5 servers to run paralley and the other time it just needs one insatnce.
+	You don't have to keep running 5 instances also all the time, which affects your cost and revenue.(Elasticity).	Its like pay as use the service.
