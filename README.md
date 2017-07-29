@@ -9,3 +9,5 @@ Most of the code is written in Python.
 Sample Quiz - IBM Bluemix
 
 Quiz 1 - IBM Bluemix
+
+Quiz 2 - AWS File Storage
