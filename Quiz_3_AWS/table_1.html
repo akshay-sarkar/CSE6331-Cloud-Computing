@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Table_1</title>
+    </head>
+    <body>
+        <h3>Akshay Sarkar - 1001506793</h3>
+        <div class="container">
+            <h3>Query 3 - </h3>
+            <form action="./selectBQuery" method="POST" enctype="multipart/form-data">
+                Enter State <input type="text" name="state">
+                Enter Total<input type="text" name="total">
+                <input type="submit" value="Search">
+            </form>
+            <table border="2px">
+                <tr><td>ALIAS NAME</td></tr>
+                {% for obj in tableData %}
+                    <tr><td>{{obj.alias}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

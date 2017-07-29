@@ -1,0 +1,12 @@
+ 6. Your program, running on AWS, should (utilizing a web interface, from AWS) 
+    - create a web page with your name and ID at  the top
+    - import the dataset into SQL on AWS, show total number of entries on web page
+    - create a simple web page to allow a user to select an age and sex and count number of entries 
+      and show those names on a web page
+    - allow a user on web page, to enter an age range (from xx to yy), show (only) names of all survived for
+      that range 
+    - allow a user to enter a last name of a passenger OR fare range, (user may select EITHER ONE of these),  
+      show the information about those passengers (all matching)
+    - allow a user to modify the destination city  for an entry selected by a fare range
+      (if more than one, allow user to select which)
+      (then show utilizing previous)
