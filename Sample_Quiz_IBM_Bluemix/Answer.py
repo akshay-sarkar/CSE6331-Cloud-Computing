@@ -1,6 +1,6 @@
-# This
+
 # Answers are given for Quiz here sequentially 
-# Please make sure you run one question at any moment.
+# Please make sure you run one answer at any moment.
 # Question - 6
 
 import swiftclient

@@ -1,0 +1,46 @@
+Quiz Q1, Summer 2017   (c) DL, UTA, 2017
+
+ Please read this:
+  I understand that I am on my honor during this quiz, I will not collaborate, 
+  use non-allowed sources, and I will not discuss this quiz with anyone for 
+  the next 4 hours. In submitting this quiz, I agree to this honor code.
+  Please initial here: Sarkar Akshay
+
+  C&P means copy and paste only those relevant lines from your program(s) into this quiz.
+  You may include lines of code, HTML, CSS, or any "textual" artifact (no libraries, executables, utilities,
+  pictures, diagrams, songs, or video, please)
+
+  NOTE: Please submit on time, late submissions will have points deducted!
+        Please submit to Blackboard. 
+
+  Due to technical logistics, we can not look at any demo (the "show us" part) in the last 5 minutes of the quiz. 
+
+  The icon "--->" means that you should place an answer at this location in the quiz, either textual, pieces of code 
+    (or HTML,XML,CSS or similar), or numeric results.
+
+ 1. Good luck!
+
+ 2. Get all files from this same folder.
+       
+ 3. Rename this quiz and your programs with your name and last digits of your ID.
+
+ 4. For each of the following parts, please implement, cut and paste the relevant code (no binaries,
+    libraries, etc, just source code and any textual configuration files, html, and similar) into this file. 
+    If possible, show each part (with  an output) to a GTA, when complete. 
+    Submit this quiz (to Blackboard) when complete, you may make up to 5 submissions. 
+
+ 5. You do not need to implement "unusual" error handling (bad executable, etc.), unless needed for this quiz,  
+    (such as file already exists, empty files, etc) but your program should not abnormally terminate (crash).
+
+ 6. Your program, running locally, should 
+    - create a simple menu to: list local files 
+    - menu has exit option
+    - checksum (add all bytes together) or XOR all bytes in the file
+    - upload file and checksum to Bluemix 
+    - menu should list cloud files
+    - be able to get file from cloud to local, then compare checksum
+
+ 7. - Create two cloud based folders, one for new version of files the other folder  for the previous version (backup)
+    - allow a user to list the contents of a remote folder 
+    - allow a user to remove all (cloud) files that are greater in size than a user specified size
+      (for example, all cloud storage files greater than 1000 bytes)
