@@ -6,6 +6,6 @@ Most of the code is written in Python.
 
 # Quiz Description
 
-Sample Quiz- IBM Bluemix
+Sample Quiz - IBM Bluemix
 
-Quiz 0- IBM Bluemix
+Quiz 1 - IBM Bluemix
