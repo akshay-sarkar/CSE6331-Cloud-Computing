@@ -1,0 +1,67 @@
+Quiz Q4, Summer 2017   (c) DL, UTA, 2017
+
+ Please read this:
+  I understand that I am on my honor during this quiz, I will not collaborate, 
+  use non-allowed sources, and I will not discuss this quiz with anyone for 
+  the next 4 hours. In submitting this quiz, I agree to this honor code.
+  Please initial here: Sarkar Akshay
+
+  C&P means copy and paste only those relevant lines from your program(s) into this quiz.
+  You may include lines of code, HTML, CSS, or any "textual" artifact (no libraries, executables, utilities,
+  pictures, diagrams, songs, or video, please)
+
+  NOTE: Please submit on time, late submissions will have points deducted!
+        Please submit to Blackboard. 
+
+  Due to technical logistics, we can not look at any demo (the "show us" part) in the last 5 minutes of the quiz. 
+
+  The icon "--->" means that you should place an answer at this location in the quiz, either textual, pieces of code 
+    (or HTML,XML,CSS or similar), or numeric results.
+
+ 1. Good luck!
+
+ 2. Get all files from this same folder.
+       
+ 3. Rename this quiz and your programs with your name and last digits of your ID.
+
+ 4. For each of the following parts, please implement, cut and paste the relevant code (no binaries,
+    libraries, etc, just source code and any textual configuration files, html, and similar) into this file. 
+    If possible, show each part (with  an output) to a GTA, when complete. 
+    Submit this quiz (to Blackboard) when complete, you may make up to 5 submissions. 
+
+ 5. You do not need to implement "unusual" error handling (bad executable, etc.), unless needed for this quiz,  
+    (such as file already exists, empty files, etc) but your program should not abnormally terminate (crash).
+    The data set included are US college and university information 
+    The data set should be first copied to AWS and then all other work, done on AWS
+
+ 6. Your program, running on AWS, should (utilizing a web interface, from AWS) 
+    for each (significant) part, when complete, you may submit to blackboard and show us
+    - create a web page with your name and ID at  the top
+    - import the dataset into SQL on AWS, show total number of entries on web page
+      create indexes on attributes where appropriate
+    Part 6.1
+    - on web form, allow a user to enter a city name, show (only) name, city, state for those people in
+      that city (if none, show "None")
+    - on web form, allow a user to select a latitude range (from_, to_) and age range, show total number 
+      (count) of entries matching, as well as first 5 (if exists) names, city, state, age, latitude, longitude
+    - allow a user to select a latitude range (from_, to_) and age range, and a count (from 1 to 1000), generate 
+      count number of random queries within that  range, show the time the operation (all queries) take,
+      the (count) of entries matching, as well as first 10 (if exists) names, city, state, age, latitude, longitude
+     - allow a user to modify the age for an entry selected by a latitude range (from_, to_) and age range,
+       (if more than one, allow user to select which) (then show utilizing previous)
+    Part 6.2
+    - repeat part 6.1, using memcache, redis, or similar caching mechanism
+
+ 7. Short answers:
+    7.1 Briefly, why do you get the timing results that you get (only timing results) from Part 6.1 and 6.2?
+	Timing Result will give us the time difference that would be observed when you do query using normal db in compare to Memcache .
+	Doing with Memcache is must faster than  DB call, as DB Connection is not required and data is stored in memory.
+    7.2 If the query in was to list all matching tuples to gender, and "female" was the query, how much expected benefit 
+        would caching give (briefly, why)?
+	Using Memcache makes your data retirval faster than 1/10 to 1/5 times in most of the cases.
+	With respect to gender, we can expect it to be fater by more than 1/10 since the query in stored loacally with respect to memcache key for just female or male.
+
+    7.3 A different approach to caching would be to create the SQL table in memory (most databases have this option).
+        Please give an advantage and disadvantage of this approach, compared to using the caching you used.
+	Db caching requires you still establish a connection with Db, which is not case with the Memcache as it stored in memory and amount of time for connection and query running could be avoided.  
+

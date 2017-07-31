@@ -11,3 +11,7 @@ Sample Quiz - IBM Bluemix
 Quiz 1 - IBM Bluemix
 
 Quiz 2 - AWS File Storage
+
+Quiz 3 - AWS Relational Database System
+
+Quiz 4 - AWS Memcache

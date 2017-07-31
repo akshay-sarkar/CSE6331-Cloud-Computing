@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+	<body>
+		<h3>Akshay Sarkar - 1001506793</h3>
+		<div class="container">
+			<table border="2px">
+				<tr><td>NAME</td><td>CITY</td><td>STATE</td></tr>
+				{% for obj in tableData %}
+					<tr>
+						<td>{{obj.GivenName}}</td>
+						<td>{{obj.City}}</td>
+						<td>{{obj.State}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</body>
+</html>
