@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>RDS/Quiz3</title>
+	</head>
+	<body>
+		<p>Name: Akshay Sarkr </p><p>ID: 1001506793</p>
+		Time taken {{timetaken}}
+		
+		<div id="demo"></div>
+	</body>
+	<script>
+	var gb,len,test, w1 =100,w2 =300, weight;
+	function loadDoc() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+	gb = this.responseText;
+	gb = gb.replace(/\(/g,"[");
+		gb = gb.replace(/\)/g,"]");
+	gb = gb.replace(/'/g,"\"");
+		gb= JSON.parse(gb);
+	len = gb.length;
+	test= '<table border="2px"><tr><td>NAME</td><td>Image</td></tr>'
+		for(var i=0;i< len ;i++){
+			weight = parseInt(gb[i][1].split(",")[0]);
+			if(weight > w1 && weight < w2){
+				test = test + '<tr><td>'+gb[i][0]+'</td><td><img src = "https://akshaysarkardiag266.blob.core.windows.net/akshayfiles/'+gb[i][0]+'.jpg" height="200" width="200"></td></tr>'
+			}
+		}
+		test = test + '</table>'
+	//parseInt(gb[0][1].split(",")[0])
+	document.getElementById("demo").innerHTML = gb;
+	}
+	};
+	xhttp.open("POST", "http://13.84.222.189:8080/selectQueryByWeight?w1=10&w2=20", true);
+	xhttp.send();
+	}
+	loadDoc();
+	</script>
+</html>

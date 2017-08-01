@@ -1,0 +1,69 @@
+Quiz Q6, Summer 2017   (c) DL, UTA, 2017
+
+ Please read this:
+  I understand that I am on my honor during this quiz, I will not collaborate, 
+  use non-allowed sources, and I will not discuss this quiz with anyone for 
+  the next 4 hours. In submitting this quiz, I agree to this honor code.
+  Please initial here: Sarkar Akshay - 1001506793
+
+  C&P means copy and paste only those relevant lines from your program(s) into this quiz.
+  You may include lines of code, HTML, CSS, or any "textual" artifact (no libraries, executables, utilities,
+  pictures, diagrams, songs, or video, please)
+
+  NOTE: Please submit on time, late submissions will have points deducted!
+        Please submit to Blackboard - IF unavailable, email to class account. 
+
+  Due to technical logistics, we can not look at any demo (the "show us" part) in the last 5 minutes of the quiz. 
+
+  The icon "--->" means that you should place an answer at this location in the quiz, either textual, pieces of code 
+    (or HTML,XML,CSS or similar), or numeric results.
+
+ 1. Good luck!
+
+ 2. Get all files from this same folder.
+    
+ 3. Rename this quiz and your programs with your name and last digits of your ID.
+
+ 4. For each of the following parts, please implement, cut and paste the relevant code (no binaries,
+    libraries, etc, just source code and any textual configuration files, html, and similar) into this file. 
+    If possible, show each part (with  an output) to a GTA, when complete. 
+    Submit this quiz (to Blackboard) when complete, you may make multiple submissions. 
+
+ 5. You do not need to implement error handling, unless needed for this quiz,  (file already exists, empty files, etc) 
+    but your program should not abnormally terminate (crash).
+
+ 6. + On AWS please take the CSV file and place it on AWS, either in EC2 or S3 (or similar).
+    + Using Hadoop, with 5 mappers and one reducer, on one (or more, if you wish) instances, 
+      find the number of people (count) who live in the zip code 19103.  
+    + Show time to run and results (preferably on an AWS web page). 
+    + Create a web page on AWS that shows in your browser: (in large letters) Your Last Name 
+      (as it appears on your ID card), your last 4 digits of your ID and the class section (time) 
+      that you are taking the class, 
+    + and then show your results (bonus: on that web page) or on an AWS interface screen.   
+
+ 7. + Create a web form (on AWS) (or other forms of input) that allows a user to input an 
+      range of heights (from:... to:...), and a specific zip code and using Hadoop with
+      8 mappers and 2 reducers, similar to part 6, show: your results. 
+    + On a web page, (or similar) with your name, class, (your info from part 6) at the top,
+      Show the results and time taken.     
+
+ 8. + Repeat part 7, where the user may vary the number of mappers from 1 to 12, and reducers, from 1 to 8. 
+    + Show first 10 matching tuples.
+
+ 9. Short answers:
+    + In your program, for this dataset, what would be a good size of the data(part of data) for each mapper (and why)?
+      How do you (or Hadoop) decide how much data should go to each mapper?
+	multiple partition is good idea , since few mapper will do task efficienlty and will finish the task. Once they finish they could pick different partion and start working again, which will lead to improvance.
+	Having 20(2.5MB) mappers could be a goog idea.
+    + Can you save the results of several Hadoop runs on AWS for later use, to use those as inputs to another Hadoop run?
+      Why not? (for example, using this dataset, first select only tuples for a specific range of zip codes then take 
+      those results and run Hadoop again to count number over a specified height)
+	I beleive it is possible, since mapper and reducer together genrates file as we last print in reducer part.
+In case that is too big we could again fetch it from HDFS and re-use it.
+    + Can the (a) reducer start running before all mappers have completed running (In your program, for example part 7)? 
+      Does this improve performance (why, or not)? 
+	Generally, no, reducer depends on the output of the mapper. But there could case where 5 mapper will work with 1 reducer and other 5 mapper with 2nd reducer.
+
+    + Briefly, why do you get the results that you get (or should get) in part 8, with more mappers 
+      (ie, increasing mappers from 2 to 4 to 10)?
+	Increasing mapper reduced the time as multiple mapper were working togher and they have put the ouptout in the reducer.

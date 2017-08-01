@@ -1,0 +1,51 @@
+Quiz Q5, Summer 2017   (c) DL, UTA, 2017
+
+ Please read this:
+  I understand that I am on my honor during this quiz, I will not collaborate, 
+  use non-allowed sources, and I will not discuss this quiz with anyone for 
+  the next 4 hours. In submitting this quiz, I agree to this honor code.
+  Please initial here: Sarkar Akshay - 1001506793
+
+  C&P means copy and paste only those relevant lines from your program(s) into this quiz.
+  You may include lines of code, HTML, CSS, or any "textual" artifact (no libraries, executables, utilities,
+  pictures, diagrams, songs, or video, please)
+
+  NOTE: Please submit on time, late submissions will have points deducted!
+        Please submit to Blackboard - IF unavailable, email to class account. 
+
+  Due to technical logistics, we can not look at any demo (the "show us" part) in the last 5 minutes of the quiz. 
+
+  The icon "--->" means that you should place an answer at this location in the quiz, either textual, pieces of code 
+    (or HTML,XML,CSS or similar), or numeric results.
+
+ 1. Good luck!
+
+ 2. Get all files from this same folder.
+    
+ 3. Rename this quiz and your programs with your name and last digits of your ID.
+
+ 4. For each of the following parts, please implement, cut and paste the relevant code (no binaries,
+    libraries, etc, just source code and any textual configuration files, html, and similar) into this file. 
+    If possible, show each part (with  an output) to a GTA, when complete. 
+    Submit this quiz (to Blackboard) when complete, you may make multiple submissions. 
+
+ 5. You do not need to implement error handling, unless needed for this quiz,  (file already exists, empty files, etc) 
+    but your program should not abnormally terminate (crash).
+
+ 6. + On AWS please take the CSV file and place it on AWS, either in EC2 or S3 (or similar).
+    + Using a clustering method, find: 
+       6 clusters based on columns District and House
+    + Show, in textual form, time to run, centroids for the clusters, and number of points in each cluster.    
+
+ 7. + Create a web form (on AWS) that allows a user to input two column names (for example "B" and "C" -or- "District" and "House")
+      and the number of clusters to find.
+    + On a web page, with your name, class, and ID number at the top,
+      Show the results, in textual form: centroids, and list all of the points in each cluster.        
+
+ 8. + Using part 7,
+    + Show a pie chart, that for each cluster, using different colors, shows the number of points in each cluster.
+    + In your browser show a bar chart (graph), where the bars are horizontally placed, such that each bar represents a cluster,
+      where the bars are sorted, from maximum to minimum by first attribute (first column selected) in that cluster,       
+      where the label of each bar is the value of that attribute, where different colors shows the value of that attribute for
+      that cluster, and the height of that bar is proportional to that attribute.
+    + Show a scatter plot (graph) of ONLY the centroid points, identifying cluster-centroids by color.

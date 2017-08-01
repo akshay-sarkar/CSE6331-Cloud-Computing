@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RDS/Quiz3</title>
+</head>
+<body>
+	<p>Name: Akshay Sarkr </p><p>ID: 1001506793</p>
+	Time taken {{timetaken}}
+	<table border="2px">
+		<tr><td>NAME</td><td>Image</td></tr>
+		{% for obj in tableData %}
+		<tr>
+				<td>{{obj.filename}}</td>
+				<td><img src = "https://akshaysarkardiag266.blob.core.windows.net/akshayfiles/{{obj.filename}}.jpg" height="200" width="200">
+				</td> 
+		</tr> {% endfor %}
+	</table>
+</body>
+</html>
